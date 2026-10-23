@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jathin Kothuri – Designer & Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f2ee;--ink:#1b1b1f;--card:#fff;--red:#e63312;--yellow:#ffc700;--blue:#0a3dff;--line:#1b1b1f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141417;--ink:#f2f2ee;--card:#232329;--line:#f2f2ee}}
+:root[data-theme="dark"]{--bg:#141417;--ink:#f2f2ee;--card:#232329;--line:#f2f2ee}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:700}
+nav .links{display:flex;gap:20px}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--red)}
+.hero{padding:30px 0 70px;position:relative}
+.hero h1{font-weight:800;font-size:clamp(3.4rem,13vw,9.5rem);letter-spacing:-.04em}
+.hero h1 span{display:inline-block;padding:0 .12em;border:3px solid var(--line);border-radius:.18em;box-shadow:6px 6px 0 var(--line)}
+.hero h1 .a{background:var(--yellow);color:#1b1b1f;transform:rotate(-2deg)}
+.hero h1 .b{background:var(--red);color:#fff;transform:rotate(1.5deg);margin-top:.12em}
+.hero p{max-width:34em;font-size:1.25rem;margin:34px 0 26px}
+.btn{display:inline-block;padding:13px 24px;font-weight:700;text-decoration:none;background:var(--blue);color:#fff;border:3px solid var(--line);border-radius:999px;box-shadow:4px 4px 0 var(--line);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--line)}
+.btn.alt{background:var(--yellow);color:#1b1b1f;margin-left:10px}
+h2{font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em;margin-bottom:10px}
+.lede{max-width:36em;margin:0 0 34px;opacity:.85}
+section{padding:50px 0}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.card{grid-column:span 3;background:var(--card);border:3px solid var(--line);border-radius:22px;box-shadow:7px 7px 0 var(--line);overflow:hidden;display:flex;flex-direction:column}
+.card.wide{grid-column:span 4}.card.narrow{grid-column:span 2}
+.art{height:210px;display:grid;place-items:center;border-bottom:3px solid var(--line);position:relative;overflow:hidden}
+.body{padding:20px 22px 22px}
+.body h3{font-size:1.6rem;margin-bottom:6px}
+.tag{display:inline-block;font-size:.85rem;font-weight:700;padding:2px 12px;border:2px solid var(--line);border-radius:99px;margin-bottom:12px}
+.body p{margin:0 0 10px}
+details{border-top:2px dashed var(--line);margin-top:12px;padding-top:10px}
+summary{cursor:pointer;font-weight:700}
+details dl{margin:10px 0 0}details dt{font-weight:700;margin-top:8px}details dd{margin:0}
+.art svg{width:100%;height:100%;display:block}.card.feat{grid-column:span 6;flex-direction:row}.feat .art{width:44%;height:auto;min-height:260px;border-bottom:0;border-right:3px solid var(--line)}.feat .art svg{height:auto}.feat .body{flex:1;padding:26px 28px}.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.links a{padding:8px 16px;font-weight:700;text-decoration:none;border:3px solid var(--line);border-radius:99px;box-shadow:3px 3px 0 var(--line);background:var(--yellow);color:#1b1b1f}.links a+a{background:var(--card);color:var(--ink)}@media (max-width:760px){.card.feat{flex-direction:column}.feat .art{width:100%;border-right:0;border-bottom:3px solid var(--line)}}.art text{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;font-weight:800}
+.sun{width:130px;height:130px;border-radius:50%;background:var(--red);border:3px solid #1b1b1f;box-shadow:inset 0 -48px 0 -2px #ffc700}
+.sun::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:#1b1b1f}
+.phone{width:112px;height:176px;background:#1b1b1f;border-radius:22px;padding:10px;display:flex;flex-direction:column;gap:8px;transform:rotate(-6deg)}
+.phone i{display:block;border-radius:8px;background:var(--yellow);height:30px}.phone i:nth-child(2){background:var(--red);height:54px}.phone i:nth-child(3){background:#fff;height:30px}
+.browser{width:78%;height:140px;background:#fff;border:3px solid #1b1b1f;border-radius:12px;overflow:hidden}
+.browser b{display:block;height:22px;background:#1b1b1f}
+.browser div{display:flex;gap:8px;padding:10px}.browser div i{flex:1;height:78px;border-radius:8px;background:var(--blue)}.browser div i:nth-child(2){background:var(--yellow)}.browser div i:nth-child(3){background:var(--red)}
+.sw{display:flex;gap:0;border:3px solid #1b1b1f;border-radius:14px;overflow:hidden;transform:rotate(3deg)}
+.sw i{width:46px;height:120px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.chips li{padding:8px 18px;border:3px solid var(--line);border-radius:99px;font-weight:700;background:var(--card);box-shadow:3px 3px 0 var(--line)}
+.chips li:nth-child(4n+1){background:var(--yellow);color:#1b1b1f}.chips li:nth-child(4n+2){background:var(--red);color:#fff}.chips li:nth-child(4n+3){background:var(--blue);color:#fff}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.about{background:var(--blue);color:#fff;border:3px solid var(--line);border-radius:28px;padding:34px;box-shadow:7px 7px 0 var(--line)}
+.about p{margin:12px 0 0}
+.contact{text-align:center;padding:70px 0 60px}
+.contact h2{font-size:clamp(2.4rem,8vw,5.5rem)}
+.contact .btn{margin-top:22px}
+footer{text-align:center;padding:10px 0 40px;font-size:.95rem;opacity:.75}
+@media (max-width:760px){.card,.card.wide,.card.narrow{grid-column:span 6}.two{grid-template-columns:1fr}.hero .btn.alt{margin:12px 0 0}nav .links{gap:14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><span>Jathin Kothuri</span><span class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></span></nav>
+
+<header class="hero">
+<h1><span class="a">Jathin</span><br><span class="b">Kothuri</span></h1>
+<p>I design and build web projects that look sharp and work properly, from editorial front ends to media-processing backends.</p>
+<a class="btn" href="#work">See my work</a><a class="btn alt" href="#contact">Say hello</a>
+</header>
+
+<section id="work">
+<h2>Selected work</h2>
+<p class="lede">Two projects I built, from a designed React front end to a media-processing tool.</p>
+<div class="grid">
+<article class="card feat">
+<div class="art" style="background:#14110f"><svg viewBox="0 0 360 260" role="img" aria-label="The Wizarding Archive: a catalogue page with house filters and four character entries"><rect x="24" y="24" width="312" height="212" rx="6" fill="#f5f1e8"/><text x="42" y="56" font-size="17" fill="#14110f" style="font-family:Georgia,serif;font-weight:700">The Wizarding Archive</text><g fill="none" stroke="#14110f" stroke-width="1.5"><rect x="42" y="68" width="34" height="16" rx="8"/><rect x="82" y="68" width="62" height="16" rx="8"/><rect x="150" y="68" width="56" height="16" rx="8"/><rect x="212" y="68" width="58" height="16" rx="8"/></g><g font-size="8" fill="#14110f" style="font-family:Inter,system-ui,sans-serif;font-weight:500"><text x="52" y="79">All</text><text x="90" y="79">Gryffindor</text><text x="159" y="79">Slytherin</text><text x="220" y="79">Ravenclaw</text></g><g stroke="#14110f" stroke-width="1.5"><rect x="42" y="100" width="60" height="116" fill="#e8e2d4"/><rect x="114" y="100" width="60" height="116" fill="#e8e2d4"/><rect x="186" y="100" width="60" height="116" fill="#e8e2d4"/><rect x="258" y="100" width="60" height="116" fill="#e8e2d4"/></g><g fill="#14110f"><rect x="48" y="106" width="48" height="62"/><rect x="120" y="106" width="48" height="62"/><rect x="192" y="106" width="48" height="62"/><rect x="264" y="106" width="48" height="62"/></g><g fill="#f5f1e8"><circle cx="72" cy="128" r="11"/><circle cx="144" cy="128" r="11"/><circle cx="216" cy="128" r="11"/><circle cx="288" cy="128" r="11"/><path d="M54 168q18-28 36 0zM126 168q18-28 36 0zM198 168q18-28 36 0zM270 168q18-28 36 0z"/></g><g font-size="8" fill="#14110f" style="font-family:Georgia,serif;font-weight:700"><text x="48" y="186">Gryffindor</text><text x="120" y="186">Slytherin</text><text x="192" y="186">Ravenclaw</text><text x="264" y="186">Hufflepuff</text></g><g fill="#14110f" opacity=".4"><rect x="48" y="196" width="36" height="3"/><rect x="120" y="196" width="36" height="3"/><rect x="192" y="196" width="36" height="3"/><rect x="264" y="196" width="36" height="3"/></g></svg></div>
+<div class="body"><span class="tag">Real project · Frontend revamp</span><h3>The Wizarding Archive</h3>
+<p>A redesigned front end for my Harry Potter character management system: a quiet, editorial catalogue of witches and wizards, filterable by house.</p>
+<details open><summary>Read the case study</summary><dl>
+<dt>Problem</dt><dd>A character database is easy to build and hard to enjoy. The goal was a front end that feels like a museum catalogue, not an admin table.</dd>
+<dt>Process</dt><dd>I chose an editorial look: Playfair Display and Inter in ivory and obsidian, with no decorative color. The copy follows the same voice, so “Registry Access” replaces “Sign in”. It is built with React 19 and Vite, with login-gated routes and a house filter.</dd>
+<dt>Outcome</dt><dd>A working full-stack archive. The React front end talks to an Express and MongoDB API, and character portraits are stored on Cloudinary.</dd></dl></details>
+<div class="links"><a href="https://github.com/NexusCoder616/The-Wizarding-Archive" target="_blank" rel="noopener">View on GitHub</a><a href="https://github.com/NexusCoder616/harry-potter-character-management-system" target="_blank" rel="noopener">Original version</a><a href="https://www.figma.com/design/drY0dfQaiguXFwF1FjUXfU" target="_blank" rel="noopener">View design in Figma</a></div></div>
+</article>
+
+<article class="card feat">
+<div class="art" style="background:#ffc700"><svg viewBox="0 0 360 260" role="img" aria-label="A video file being transcoded into 360p, 720p and 1080p versions"><rect x="30" y="95" width="56" height="72" rx="6" fill="#f2f2ee" stroke="#1b1b1f" stroke-width="4"/><text x="58" y="138" text-anchor="middle" font-size="13" fill="#1b1b1f">.mp4</text><path d="M96 131h30m-8-8l8 8-8 8" fill="none" stroke="#1b1b1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="140" y="70" width="70" height="32" rx="6" fill="#0a3dff" stroke="#1b1b1f" stroke-width="3"/><text x="150" y="91" font-size="13" fill="#fff">360p</text><rect x="140" y="116" width="110" height="32" rx="6" fill="#e63312" stroke="#1b1b1f" stroke-width="3"/><text x="150" y="137" font-size="13" fill="#fff">720p</text><rect x="140" y="162" width="150" height="32" rx="6" fill="#1b1b1f" stroke="#1b1b1f" stroke-width="3"/><text x="150" y="183" font-size="13" fill="#fff">1080p</text><text x="180" y="228" text-anchor="middle" font-size="12" fill="#1b1b1f">Adaptive bitrate simulation</text></svg></div>
+<div class="body"><span class="tag">Real project · Web tool and API</span><h3>Multimedia Compression &amp; Streaming Analyzer</h3>
+<p>A Node.js tool that analyzes images, audio and video: compression, bitrates and streaming behavior.</p>
+<details open><summary>Read the case study</summary><dl>
+<dt>Problem</dt><dd>Compression and streaming happen out of sight. The goal was to make it visible what happens to a file when it is compressed and streamed.</dd>
+<dt>Process</dt><dd>I built an Express API that compresses images with sharp and transcodes audio and video with ffmpeg, including 360p, 720p and 1080p versions with an adaptive bitrate simulation. Range requests make audio and video seekable, SQLite keeps an analysis history, and helmet, rate limiting and path sanitization protect the server.</dd>
+<dt>Outcome</dt><dd>A deployed tool with a live demo and a documented API for images, audio, video, jobs and analysis history.</dd></dl></details>
+<div class="links"><a href="https://multimedia-analyzer-v2.vercel.app" target="_blank" rel="noopener">View live demo</a><a href="https://github.com/NexusCoder616/multimedia_analyzer_v2" target="_blank" rel="noopener">View on GitHub</a></div></div>
+</article>
+
+
+
+    </div>
+</section>
+
+<section id="about">
+<div class="two">
+<div class="about"><h2>About me</h2>
+<p>I’m a designer who likes to build. I care about how things look and how they work, so I code my ideas myself.</p>
+<p>I’m a student, and everything shown here is work I built. More projects are coming.</p></div>
+<div><h3 style="font-size:1.7rem;margin-bottom:16px">What I work with</h3>
+<ul class="chips"><li>UI design</li><li>React</li><li>Vite</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>SQLite</li></ul></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Let’s make something bold.</h2>
+<p>Open to internships, freelance and collaborations.</p>
+<a class="btn" href="mailto:jathinkothuri07@gmail.com">Email Jathin</a>
+</section>
+<footer>© 2026 Jathin Kothuri.</footer>
+</div>
+</body>
+</html>
