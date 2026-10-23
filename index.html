@@ -83,8 +83,6 @@ footer{text-align:center;padding:10px 0 40px;font-size:.95rem;opacity:.75}
 @media (max-width:760px){.hero{grid-template-columns:1fr}.me{max-width:420px;margin:34px 0 0 auto}.hi{left:-2%}.badge{left:-3%}}
 @media (prefers-reduced-motion:reduce){.me *{animation:none!important}.me .photo{transition:none}}
 .hero-copy,.me{position:relative;z-index:1}
-.hero::before{content:"";position:absolute;inset:-40px -20px;z-index:0;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(380px circle at calc(var(--gx,50%) + 20px) calc(var(--gy,40%) + 40px),rgba(255,199,0,.38),rgba(230,51,18,.14) 48%,transparent 72%)}
-.hero.lit::before{opacity:1}
 .me .photo{translate:calc(var(--px,0)*-8px) calc(var(--py,0)*-5px)}
 .hi{--d:22}.badge{--d:16}.spark{--d:30}
 .sticker{touch-action:none;user-select:none;-webkit-user-select:none;translate:calc(var(--px,0)*var(--d,0)*1px + var(--dx,0px)) calc(var(--py,0)*var(--d,0)*1px + var(--dy,0px));transition:scale .25s cubic-bezier(.2,1.4,.4,1),rotate .25s,filter .25s}
@@ -188,9 +186,8 @@ if(!fine||reduce)return;
 /* parallax and spotlight */
 var tx=0,ty=0,cx=0,cy=0,run=false;
 function loop(){cx+=(tx-cx)*.08;cy+=(ty-cy)*.08;me.style.setProperty('--px',cx.toFixed(3));me.style.setProperty('--py',cy.toFixed(3));if(Math.abs(tx-cx)>.001||Math.abs(ty-cy)>.001)requestAnimationFrame(loop);else run=false;}
-hero.addEventListener('pointerenter',function(){hero.classList.add('lit');});
-hero.addEventListener('pointerleave',function(){tx=0;ty=0;hero.classList.remove('lit');if(!run){run=true;requestAnimationFrame(loop);}});
-hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect(),m=me.getBoundingClientRect();hero.style.setProperty('--gx',(e.clientX-r.left)+'px');hero.style.setProperty('--gy',(e.clientY-r.top)+'px');tx=clamp((e.clientX-(m.left+m.width/2))/m.width,-1,1);ty=clamp((e.clientY-(m.top+m.height/2))/m.height,-1,1);if(!run){run=true;requestAnimationFrame(loop);}});
+hero.addEventListener('pointerleave',function(){tx=0;ty=0;if(!run){run=true;requestAnimationFrame(loop);}});
+hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect(),m=me.getBoundingClientRect();tx=clamp((e.clientX-(m.left+m.width/2))/m.width,-1,1);ty=clamp((e.clientY-(m.top+m.height/2))/m.height,-1,1);if(!run){run=true;requestAnimationFrame(loop);}});
 /* custom cursor */
 document.body.classList.add('cc');
 var dot=document.createElement('div'),ring=document.createElement('div');dot.className='cur-dot';ring.className='cur-ring';document.body.appendChild(ring);document.body.appendChild(dot);
